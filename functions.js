@@ -37,7 +37,7 @@ $.ajax({
 };      
 
 function colocaHumedad(data){
-     var humedad  = data.contextElement.attributes[1].value;
+     var humedad  = data.contextElement.attributes[0].value;
      //var longitude =  data.contextElement.attributes[2].value;
      //var posicionTransporte = new google.maps.LatLng(latitude,longitude);
      //var posicionTransporte = new google.maps.LatLng(20.6992985,-103.3236317);

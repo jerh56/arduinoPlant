@@ -36,6 +36,25 @@ $.ajax({
     });
 };      
 
+function revisarTemperatura() {      
+
+$.ajaxSetup({
+  beforeSend: function(request) {
+    request.setRequestHeader("X-Auth-Token","VMfS1db5lyV3mtJ7YSqAqPFHR9cu9m");
+    request.setRequestHeader("Accept","application/json");
+    request.setRequestHeader("Content-Type","application/json"); 
+  }
+});
+    
+$.ajax({
+         url: "http://orion.lab.fi-ware.org:1026/ngsi10/contextEntities/plant00001", type: 'GET'
+    }).then(function(data) {
+        alert(JSON.stringify(data));
+        colocaTemperatura(data); 
+    });
+};      
+
+
 function colocaHumedad(data){
      var humedad  = data.contextElement.attributes[0].value;
      var temperatura =  data.contextElement.attributes[1].value;
@@ -49,7 +68,7 @@ function colocaHumedad(data){
     marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');*/
 
     $('#tvHumedad').html("Humedad: " + humedad);
-    $('#tvTemperatura').html("Temperatura: " + temperatura);
+    //$('#tvTemperatura').html("Temperatura: " + temperatura);
     
     //$('#tvHumedad').val(humedad);
 	//$('#Long').html("Longitud: " + lng);
@@ -57,4 +76,11 @@ function colocaHumedad(data){
 			            
 			            $('#Long').val(lng);*/
 			            
+};
+
+function colocaTemperatura(data){
+     
+    var temperatura =  data.contextElement.attributes[1].value;
+    $('#tvTemperatura').html("Temperatura: " + temperatura);
+	            
 };

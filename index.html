@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="functions.js"></script>
+  </head>
+  <body>
+   
+    
+    <div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Arduino Plant</h1>
+  </div>
+
+  <div data-role="content">
+    
+      <h1 id="tvHumedad">Esperando Humedad... </h1>
+        	  <h1 id="tvTemperatura">Esperando Temperatura... </h1>
+            <input type="button" id="btHumedad" value = "Revisar humedad" onclick="revisarHumedad();">
+            <input type="button" id="btTemperatura" value = "Revisar temperatura" onclick="revisarTemperatura();">
+                
+  </div>
+  <div data-role="footer">
+    <h1>Guanabana Studio</h1>
+  </div>
+  </div>
+  
+</div> 
+  </body>
+
+  <!--https://developers.google.com/maps/documentation/javascript/tutorial?hl=es-MX#api_key-->
+</html>

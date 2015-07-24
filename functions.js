@@ -38,7 +38,7 @@ $.ajax({
 
 function colocaHumedad(data){
      var humedad  = data.contextElement.attributes[0].value;
-     //var longitude =  data.contextElement.attributes[2].value;
+     var temperatura =  data.contextElement.attributes[1].value;
      //var posicionTransporte = new google.maps.LatLng(latitude,longitude);
      //var posicionTransporte = new google.maps.LatLng(20.6992985,-103.3236317);
      /*var marker = new google.maps.Marker({
@@ -49,7 +49,9 @@ function colocaHumedad(data){
     marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');*/
 
     $('#tvHumedad').html("Humedad: " + humedad);
-    $('#tvHumedad').val(humedad);
+    $('#tvTemperatura').html("Temperatura: " + temperatura);
+    
+    //$('#tvHumedad').val(humedad);
 	//$('#Long').html("Longitud: " + lng);
 /*
 			            

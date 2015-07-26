@@ -21,6 +21,7 @@ function inicializar() {
 function revisarSensores() {
     revisarHumedad();
     revisarTemperatura();
+    revisarTierra();
 };
 
 function revisarHumedad() {      
@@ -74,7 +75,7 @@ $.ajax({
          url: "http://orion.lab.fi-ware.org:1026/ngsi10/contextEntities/plant00002", type: 'GET'
     }).then(function(data) {
         //alert(JSON.stringify(data));
-        colocaTemperatura(data); 
+        colocaTierra(data); 
     });
 };     
 

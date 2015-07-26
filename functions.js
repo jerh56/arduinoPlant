@@ -61,31 +61,13 @@ $.ajax({
 
 
 function colocaHumedad(data){
-     var humedad  = data.contextElement.attributes[0].value;
      var temperatura =  data.contextElement.attributes[1].value;
-     //var posicionTransporte = new google.maps.LatLng(latitude,longitude);
-     //var posicionTransporte = new google.maps.LatLng(20.6992985,-103.3236317);
-     /*var marker = new google.maps.Marker({
-      position: posicionTransporte,
-      map: map,
-      title: 'El transporte esta aqui!'
-    });
-    marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');*/
-
-    $('#tvHumedad').html("Humedad: " + humedad);
-    //$('#tvTemperatura').html("Temperatura: " + temperatura);
-    
-    //$('#tvHumedad').val(humedad);
-	//$('#Long').html("Longitud: " + lng);
-/*
-			            
-			            $('#Long').val(lng);*/
-			            
+     $('#tvHumedad').html("Humedad: " + humedad);
+     $('#tvResponse').html(JSON.stringify(data));
 };
 
 function colocaTemperatura(data){
-     
     var temperatura =  data.contextElement.attributes[1].value;
     $('#tvTemperatura').html("Temperatura: " + temperatura);
-	            
+    $('#tvResponse').html(JSON.stringify(data));
 };

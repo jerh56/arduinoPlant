@@ -61,7 +61,7 @@ $.ajax({
 
 
 function colocaHumedad(data){
-     var temperatura =  data.contextElement.attributes[1].value;
+     var humedad =  data.contextElement.attributes[0].value;
      $('#tvHumedad').html("Humedad: " + humedad);
      $('#tvResponse').html(JSON.stringify(data));
 };

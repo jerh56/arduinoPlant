@@ -10,6 +10,7 @@ var bMap = false;
 
 $(document).ready(function() {
 		inicializar();
+		setInterval(revisarSensores());
 });
 
 
@@ -17,6 +18,10 @@ function inicializar() {
   
 };
 
+function revisarSensores() {
+    revisarHumedad();
+    revisarTemperatura();
+};
 
 function revisarHumedad() {      
 

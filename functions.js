@@ -10,7 +10,7 @@ var bMap = false;
 
 $(document).ready(function() {
 		inicializar();
-		setInterval(revisarSensores());
+		setInterval(revisarSensores(), 3000);
 });
 
 
@@ -36,7 +36,7 @@ $.ajaxSetup({
 $.ajax({
          url: "http://orion.lab.fi-ware.org:1026/ngsi10/contextEntities/plant00001", type: 'GET'
     }).then(function(data) {
-        alert(JSON.stringify(data));
+        //alert(JSON.stringify(data));
         colocaHumedad(data); 
     });
 };      
@@ -54,7 +54,7 @@ $.ajaxSetup({
 $.ajax({
          url: "http://orion.lab.fi-ware.org:1026/ngsi10/contextEntities/plant00001", type: 'GET'
     }).then(function(data) {
-        alert(JSON.stringify(data));
+        //alert(JSON.stringify(data));
         colocaTemperatura(data); 
     });
 };      

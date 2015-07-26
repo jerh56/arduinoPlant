@@ -81,18 +81,18 @@ $.ajax({
 
 function colocaHumedad(data){
      var humedad =  data.contextElement.attributes[0].value;
-     $('#tvHumedad').html("Humedad: " + humedad);
+     $('#tvHumedad').html("Enviromental humidity: " + humedad);
      $('#tvResponse').html(JSON.stringify(data));
 };
 
 function colocaTemperatura(data){
     var temperatura =  data.contextElement.attributes[1].value;
-    $('#tvTemperatura').html("Temperatura: " + temperatura);
+    $('#tvTemperatura').html("Temperature: " + temperatura);
     $('#tvResponse').html(JSON.stringify(data));
 };
 
 function colocaTierra(data){
      var tierra =  data.contextElement.attributes[2].value;
-     $('#tvTierra').html("Humedad tierra: " + tierra);
+     $('#tvTierra').html("Moisture humidity: " + tierra);
      $('#tvResponse').html(JSON.stringify(data));
 };

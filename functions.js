@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 
 function inicializar() {
-  	setInterval(revisarSensores(), 3000);
+  	var fnReview = setInterval(function () {revisarSensores()}, 1000);
 };
 
 function revisarSensores() {
